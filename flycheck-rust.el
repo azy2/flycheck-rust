@@ -90,10 +90,10 @@ Calls `cargo metadata --no-deps --manifest-path MANIFEST
 --format-version 1', parses and collects the targets for the
 current workspace, and returns them in a list, or nil if no
 targets could be found."
-  (let ((cargo (funcall flycheck-executable-find "cargo")))
+  (let ((cargo (funcall flycheck-executable-find "xargo")))
     (unless cargo
-      (user-error "flycheck-rust cannot find `cargo'.  Please \
-make sure that cargo is installed and on your PATH.  See \
+      (user-error "flycheck-rust cannot find `xargo'.  Please \
+make sure that xargo is installed and on your PATH.  See \
 http://www.flycheck.org/en/latest/user/troubleshooting.html for \
 more information on setting your PATH with Emacs."))
     ;; metadata contains a list of packages, and each package has a list of
